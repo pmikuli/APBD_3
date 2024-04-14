@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using REST_api.DTOs;
 using REST_api.Interfaces;
 using REST_api.Models;
 
@@ -16,7 +17,7 @@ namespace REST_api.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<Animal>> GetAllAnimals()
+        public ActionResult<IEnumerable<AnimalDTO>> GetAllAnimals()
         {
             return Ok();
         }
