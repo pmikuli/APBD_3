@@ -1,6 +1,7 @@
 using REST_api.Interfaces;
 using REST_api.Repositories;
 using REST_api.Services;
+using REST_api.Validators;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IAnimalsService, AnimalsService>();
 builder.Services.AddScoped<IAnimalsRepository, AnimalsRepository>();
+builder.Services.AddScoped<IAnimalConverter, AnimalConverter>();
 
 var app = builder.Build();
 
