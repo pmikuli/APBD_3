@@ -5,6 +5,6 @@ namespace REST_api.Interfaces
     public interface IAnimalsRepository
     {
         IEnumerable<Animal> GetAllAnimals();
-
+        int CreateAnimal(Animal animal);
     }
 }

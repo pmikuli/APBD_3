@@ -43,6 +43,9 @@ namespace REST_api.Repositories
 
             command.CommandText = "INSERT INTO Animals(Name, Description, Area, Category) VALUES (@Name, @Description, @Area, @Category); SELECT SCOPE_IDENTITY;";
             command.Parameters.AddWithValue("@Name", animal.Name);
+            command.Parameters.AddWithValue("@Description", animal.Description);
+            command.Parameters.AddWithValue("@Area", animal.Area);
+            command.Parameters.AddWithValue("@Category", animal.Category);
 
             con.Open();
 
